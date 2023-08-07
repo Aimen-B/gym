@@ -1,0 +1,230 @@
+* {
+  box-sizing: border-box;
+  flex-shrink: 0;
+  flex-grow: 0;
+  /* border: 1px solid black; */
+}
+
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  width: 100%;
+}
+
+#page {
+  border: 1px solid green;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+#sidebar {
+  height: 100%;
+  width: 30%;
+  max-width: 250px;
+  background: #5077f7;
+}
+
+#main {
+  height: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+#header {
+  border: 1px solid blue;
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.search {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 30px;
+  /* width: 50%; */
+  width: 80%;
+  max-width: 500px;
+}
+
+#filters-btn {
+  border: 1px solid black;
+  height: 100%;
+  width: 100px;
+  /* background-color: grey; */
+  position: relative;
+
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+#filters-btn,
+#filters-btn label {
+  cursor: pointer;
+}
+
+#filters-btn:hover #filters-list {
+  display: inline-block;
+}
+
+#filters-list {
+  display: none;
+  position: absolute;
+  margin: 0;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  background-color: white;
+  text-align: center;
+}
+
+.filters-li {
+  margin: 0;
+  padding: 7px 15px;
+  border: 1px solid black;
+}
+
+.filters-li:hover {
+  background-color: rgba(128, 128, 128, 0.397);
+}
+
+#searchbar-container {
+  height: 100%;
+  flex-grow: 1;
+}
+
+#searchbar-container input {
+  height: 100%;
+  padding: 5px 10px;
+  width: 100%;
+}
+
+#content {
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+#add-btn {
+  border: 1px solid black;
+  width: 100px;
+  height: 26px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin: 12px; /* to delete: just for preview*/
+}
+
+/*client Cards */
+#cards-container {
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-left: 10px;
+}
+
+#cards-container ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-gap: 1rem;
+
+  width: 100%;
+}
+
+#cards-container ul li {
+  background-color: rgb(126, 167, 255);
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-container {
+  width: 300px;
+  height: 200px;
+  border: 1px solid black;
+}
+.user {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  font-size: 20px;
+  background: #4b4eee;
+  margin-bottom: 20px;
+}
+
+.card-wrapper {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  height: 100%;
+}
+
+.userImg {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid rgb(0, 60, 255);
+}
+
+.user-info {
+  display: flex;
+  justify-content: space-around;
+
+  height: 20%;
+  align-items: center;
+}
+.user-locker {
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.user-locker button {
+  border-style: none;
+  padding: 4px 15px;
+  background-color: rgb(55, 243, 55);
+}
+
+.card-btns {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+
+  justify-content: space-between;
+}
+.card-btns button {
+  border-style: none;
+  width: 33%;
+  padding: 5px 20px;
+}
+
+#delete-btn {
+  background-color: red;
+}
+
+.hidden {
+  display: none;
+}
